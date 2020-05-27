@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <InputSet
+    id="SuspectCommonInfo_EXTInputSet"
+    mode="ABDoctor">
+    <TextInput
+      id="id1"
+      label="&quot;Doctor Details&quot;"
+      value="&quot;Doctor data&quot;"/>
+    <TextInput
+      id="id2"
+      label="&quot;Doctor Info&quot;"
+      value="&quot;Doctor data&quot;"/>
+  </InputSet>
+</PCF>

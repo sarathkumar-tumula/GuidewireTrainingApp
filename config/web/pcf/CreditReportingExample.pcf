@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <Page
+    canEdit="true"
+    id="CreditReportingExample"
+    title="&quot;Credit Reporting&quot;">
+    <LocationEntryPoint
+      signature="CreditReportingExample(anABContact:ABContact)"/>
+    <Variable
+      name="anABContact"
+      type="ABContact"/>
+    <Variable
+      initialValue="new CreditReporting()"
+      name="creditreport"
+      type="CreditReporting"/>
+    <Screen>
+      <Toolbar>
+        <EditButtons/>
+        <ToolbarButton
+          action="null"
+          id="quote"
+          label="&quot;Quote&quot;"/>
+        <ToolbarButton
+          action="null"
+          id="ToolbarButton"
+          label="&quot;Save Draft&quot;"/>
+      </Toolbar>
+      <DetailViewPanel
+        editable="true"
+        id="creditDV">
+        <InputColumn>
+          <BooleanRadioInput
+            editable="true"
+            falseLabel="&quot;credit level&quot;"
+            id="id89"
+            label="&quot;Credit Report Mode&quot;"
+            trueLabel="&quot;Credit Record&quot;"
+            value="creditreport.CreditReportMode"/>
+          <InputDivider/>
+          <Label
+            label="&quot;A Credit Score is required in order to bind a policy.Request one here:&quot;"/>
+          <TypeKeyInput
+            editable="true"
+            id="creditreportfor"
+            label="&quot;Credit Report For &quot;"
+            value="creditreport.CreditReportFor">
+            <PostOnChange/>
+          </TypeKeyInput>
+          <TextInput
+            id="id71"
+            label="&quot;Name&quot;"
+            value="creditreport.DisplayName"/>
+          <TextInput
+            editable="true"
+            id="id85"
+            label="&quot;Address on policy&quot;"
+            value="creditreport.AddressOnpolicy"/>
+          <BooleanRadioInput
+            editable="true"
+            id="id90"
+            label="&quot;Have moved in the last 60 days&quot;"
+            required="true"
+            value="creditreport.Haveyoumovedlast60days"/>
+          <BooleanRadioInput
+            editable="true"
+            id="id91"
+            label="&quot;Has policy owner's name recently changed?&quot;"
+            required="true"
+            value="creditreport.Haspolicyownnamerecentchanged"/>
+        </InputColumn>
+      </DetailViewPanel>
+      <DetailViewPanel>
+        <InputColumn>
+          <ButtonInput
+            action="null"
+            align="center"
+            id="Ordercreditreport"
+            value="&quot;Order Credit Report&quot;"/>
+        </InputColumn>
+      </DetailViewPanel>
+    </Screen>
+  </Page>
+</PCF>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <InputSet
+    id="SuspectCommonInfo_EXTInputSet"
+    mode="ABAdjudicator">
+    <TextInput
+      id="id1"
+      label="&quot;Claim Adjuster Details&quot;"
+      value="&quot;Claim Adjuster data&quot;"/>
+    <TextInput
+      id="id2"
+      label="&quot;Claim Adjuster Info&quot;"
+      value="&quot;Claim Adjuster data&quot;"/>
+  </InputSet>
+</PCF>

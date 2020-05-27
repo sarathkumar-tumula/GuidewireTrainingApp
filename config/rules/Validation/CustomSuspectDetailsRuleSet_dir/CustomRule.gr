@@ -1,0 +1,27 @@
+package rules.Validation.CustomSuspectDetailsRuleSet_dir
+
+@gw.rules.RuleName("CustomRule")
+internal class CustomRule {
+  static function doCondition(suspectDetails_ext : entity.SuspectDetails_ext) : boolean {
+/*start00rule*/
+return true
+/*end00rule*/
+}
+
+  static function doAction(suspectDetails_ext : entity.SuspectDetails_ext, actions : gw.rules.Action) {
+/*start00rule*/
+
+
+    var bankAccount= new SuspectBankAccount_Ext()
+    bankAccount.BankName="state bank of india"
+    bankAccount.AccountNumber="325647955"
+    bankAccount.RoutingNumber="4579556"
+    bankAccount.SuspectAccType=SuspectAccountTypes_EXT.TC_CURRENT
+
+    suspectDetails_ext.addToSuspectAccounts(bankAccount)
+    actions.exit()
+
+
+/*end00rule*/
+  }
+}

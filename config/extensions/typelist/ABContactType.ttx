@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<typelistextension
+  xmlns="http://guidewire.com/typelists"
+  desc="@deprecated (since 8.0.0) Not used by ContactManager.  Types of contacts in the address book"
+  name="ABContactType"/>

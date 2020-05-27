@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <Popup
+    canEdit="true"
+    id="PopupExamplePopup"
+    title="&quot;examplepopup&quot;">
+    <LocationEntryPoint
+      signature="PopupExamplePopup(bankname:SuspectBankAccount_Ext)"/>
+    <Variable
+      name="bankname"
+      type="SuspectBankAccount_Ext"/>
+    <Screen>
+      <Toolbar>
+        <EditButtons/>
+      </Toolbar>
+      <DetailViewPanel>
+        <InputColumn>
+          <TextInput
+            editable="true"
+            id="id89"
+            label="&quot;Bank name&quot;"
+            value="bankname.BankName"/>
+          <TextInput
+            editable="true"
+            id="id87"
+            label="&quot;Routing Number&quot;"
+            value="bankname.RoutingNumber"/>
+        </InputColumn>
+      </DetailViewPanel>
+    </Screen>
+  </Popup>
+</PCF>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <Page
+    canEdit="true"
+    id="summary"
+    title="summary">
+    <LocationEntryPoint
+      signature="summary(anABContact:AbContact)"/>
+    <Variable
+      name="anABContact"
+      type="ABContact"/>
+    <Screen
+      desc="summaryscreen"
+      editable="true"
+      id="testScreen">
+      <Toolbar>
+        <EditButtons
+          cancelVisible="true"
+          editDefault="true"
+          editVisible="true"
+          id="buttons"
+          updateVisible="true"/>
+      </Toolbar>
+      <PanelRef
+        def="detailsCV(anABContact)"/>
+    </Screen>
+  </Page>
+</PCF>

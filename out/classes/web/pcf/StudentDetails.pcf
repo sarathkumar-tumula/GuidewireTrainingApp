@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <Page
+    canEdit=" true"
+    id="StudentDetails"
+    title="&quot;studentdetails&quot;">
+    <LocationEntryPoint
+      signature="StudentDetails(anABContact:ABContact)"/>
+    <Variable
+      initialValue="new Student()"
+      name="student"
+      type="Student"/>
+    <Variable
+      name="anABContact"
+      type="ABContact"/>
+    <Screen>
+      <Toolbar>
+        <EditButtons/>
+      </Toolbar>
+      <!-- <CardViewPanel>
+        <Card
+          id="id1"
+          title="&quot;studentDetails&quot;">
+          <DetailViewPanel>
+            <InputColumn>
+              <TypeKeyInput
+                editable="true"
+                id="gender"
+                label="&quot;Gender&quot;"
+                value="student.Gender"/>
+            </InputColumn>
+          </DetailViewPanel>
+        </Card>
+        <Card
+          id="profeserdetails"
+          title="&quot;professordetails&quot;">
+          <PanelRef
+            def="ProfessorDetailsLV(student)">
+            <Toolbar>
+              <IteratorButtons
+                iterator="ProfessorDetailsLV.ProfessorDetailsLV"/>
+            </Toolbar>
+          </PanelRef>
+        </Card>
+      </CardViewPanel> -->
+      <PanelRef
+        def="ABContactDetailsCompanyDV(anABContact)"/>
+    </Screen>
+  </Page>
+</PCF>

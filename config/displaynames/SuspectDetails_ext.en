@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Entity
+  name="SuspectDetails_ext">
+  <Columns>
+    <Column
+      beanPath="SuspectDetails_ext.suspectname"
+      name="suspectname"/>
+    <Column
+      beanPath="SuspectDetails_ext.suspectdetails"
+      name="suspectdetails"/>
+  </Columns>
+  <DisplayName><![CDATA[return suspectname+suspectdetails]]></DisplayName>
+</Entity>

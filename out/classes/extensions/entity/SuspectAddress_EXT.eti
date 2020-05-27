@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  desc="this is suspect address"
+  entity="SuspectAddress_EXT"
+  table="suspectaddress_ext"
+  type="retireable">
+  <column
+    name="AddressLine1"
+    nullok="true"
+    type="shorttext"/>
+  <column
+    name="AddressLine2"
+    nullok="true"
+    type="shorttext"/>
+  <column
+    name="State"
+    nullok="true"
+    type="shorttext"/>
+  <column
+    name="City"
+    nullok="true"
+    type="shorttext"/>
+  <column
+    name="Country"
+    nullok="true"
+    type="shorttext"/>
+  <column
+    name="ZipCode"
+    nullok="true"
+    type="shorttext"/>
+  <implementsEntity
+    name="Validatable"/>
+</entity>

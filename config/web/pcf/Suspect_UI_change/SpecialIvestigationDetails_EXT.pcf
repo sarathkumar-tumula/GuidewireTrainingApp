@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <Page
+    canEdit="true"
+    canVisit="true"
+    id="SpecialIvestigationDetails_EXT"
+    title="&quot;Special Investigation Details&quot;">
+    <LocationEntryPoint
+      signature="SpecialIvestigationDetails_EXT(anABContact:ABContact)"/>
+    <Variable
+      name="anABContact"
+      type="ABContact"/>
+    <Variable
+      initialValue="new SuspectDetails_ext()"
+      name="suspectdetails"
+      type="SuspectDetails_ext"/>
+    <Screen>
+      <Toolbar>
+        <EditButtons/>
+      </Toolbar>
+      <CardViewPanel>
+        <Card
+          id="mycard"
+          title="&quot;mycard&quot;">
+          <DetailViewPanel>
+            <InputColumn>
+              <Label
+                id="id5"
+                label="&quot;Suspect Info&quot;"/>
+              <TextInput
+                id="id87"
+                label="&quot;Suspect Default Name&quot;"
+                value="suspectdetails.DisplayName"/>
+              <TextInput
+                editable="true"
+                id="id7"
+                label="&quot;Suspect Name&quot;"
+                value="suspectdetails.suspectname">
+                <PostOnChange
+                  target="DATA_ONLY"/>
+              </TextInput>
+              <TextInput
+                editable="true"
+                id="id1"
+                label="&quot;Suspect Details&quot;"
+                value="suspectdetails.suspectdetails">
+                <PostOnChange
+                  target="DATA_ONLY"/>
+              </TextInput>
+              <BooleanRadioInput
+                editable="true"
+                id="id3"
+                label="&quot;Investigation Needed&quot;"
+                value="suspectdetails.InvestigationNeeded">
+                <PostOnChange/>
+              </BooleanRadioInput>
+              <DateInput
+                editable="true"
+                id="id4"
+                label="&quot;Investigation Date&quot;"
+                value="suspectdetails.InvestigationDate"
+                visible="suspectdetails.InvestigationNeeded"/>
+              <TextAreaInput
+                editable="true"
+                id="vin"
+                label="&quot;Suspect Preferences&quot;"
+                value="suspectdetails.suspectpreferences"/>
+              <TextInput
+                editable="true"
+                id="id20"
+                label="&quot;Collotral amount&quot;"
+                validationExpression="suspectdetails.collateralamount&gt;9999?&quot;Amount less than 10000&quot;:null"
+                value="suspectdetails.collateralamount"/>
+              <TextInput
+                editable="true"
+                id="year"
+                label="&quot;Enter year&quot;"
+                value="suspectdetails.year"/>
+              <TextInput
+                editable="true"
+                id="ssn"
+                label="&quot;SSN&quot;"
+                value="suspectdetails.SSN"/>
+              <TextInput
+                editable="true"
+                id="vinnumber"
+                label="&quot;VIN&quot;"
+                value="suspectdetails.VIN"/>
+              <TextInput
+                editable="true"
+                id="example"
+                label="&quot;Licenece Number&quot;"
+                regex="&quot;[0-9a-zA-Z]{5,10}&quot;"
+                value="suspectdetails.License"/>
+              <DateInput
+                editable="true"
+                id="dateofbirth"
+                label="&quot;Date Of Birth&quot;"
+                value="suspectdetails.DateOfBirth"/>
+              <TextInput
+                id="age"
+                label="&quot;Age&quot;"
+                value="suspectdetails.Ages"/>
+              <TextInput
+                editable="true"
+                id="id856"
+                label="&quot;Governing&quot;"
+                value="suspectdetails.Governing">
+                <PostOnChange
+                  target="DATA_ONLY"/>
+              </TextInput>
+              <InputSetRef
+                def="SuspectCommonInfo_EXTInputSet()"
+                mode="anABContact.Subtype"/>
+            </InputColumn>
+            <InputColumn>
+              <Label
+                id="id8"
+                label="&quot;Suspect Address&quot;"/>
+              <TextInput
+                editable="true"
+                id="id9"
+                label="&quot;Address Line 1&quot;"
+                value="suspectdetails.MySuspectAddress.AddressLine1"/>
+              <TextInput
+                editable="true"
+                id="id10"
+                label="&quot;Address Line 2&quot;"
+                value="suspectdetails.MySuspectAddress.AddressLine2"/>
+              <TextInput
+                editable="true"
+                id="id11"
+                label="&quot;State&quot;"
+                value="suspectdetails.MySuspectAddress.State"/>
+              <TextInput
+                id="id89"
+                label="&quot;Address 1/2 and state&quot;"
+                value="suspectdetails.MySuspectAddress.completeAddress"/>
+              <TextInput
+                editable="true"
+                id="id12"
+                label="&quot;City&quot;"
+                value="suspectdetails.MySuspectAddress.City"/>
+              <TextInput
+                editable="true"
+                id="id14"
+                label="&quot;Country&quot;"
+                value="suspectdetails.MySuspectAddress.Country"/>
+              <TextInput
+                editable="true"
+                id="id15"
+                label="&quot;Zipcode&quot;"
+                value="suspectdetails.MySuspectAddress.ZipCode"/>
+              <TypeKeyInput
+                editable="true"
+                id="id19"
+                label="&quot;Suspect Account Types&quot;"
+                value="suspectdetails.SuspectAccType"/>
+            </InputColumn>
+          </DetailViewPanel>
+        </Card>
+        <Card
+          id="SIUinfo"
+          title="&quot;S.I.U Info&quot;">
+          <PanelRef>
+            <Toolbar>
+              <IteratorButtons
+                iterator="MySuspectBALV"/>
+            </Toolbar>
+            <ListViewPanel
+              id="MySuspectBALV">
+              <RowIterator
+                editable="true"
+                elementName="bankName"
+                toAdd="suspectdetails.addToSuspectAccounts(bankName)"
+                toRemove="suspectdetails.removeFromSuspectAccounts(bankName)"
+                value="suspectdetails.SuspectAccounts">
+                <Row>
+                  <Cell
+                    id="governinglaw"
+                    label="&quot;Governing Law&quot;"
+                    value="suspectdetails.GoverningAdd"/>
+                  <Cell
+                    action="PopupExamplePopup.push(bankName)"
+                    editable="true"
+                    id="BN"
+                    label="&quot;Bank Name&quot;"
+                    value="bankName.BankName">
+                    <PostOnChange/>
+                  </Cell>
+                  <Cell
+                    editable="true"
+                    id="AN"
+                    label="&quot;Account Number&quot;"
+                    required="true"
+                    value="bankName.AccountNumber"/>
+                  <Cell
+                    action="ExitPointEX.push()"
+                    editable="true"
+                    id="RN"
+                    label="&quot;Rounting number&quot;"
+                    value="bankName.RoutingNumber"/>
+                  <Cell
+                    editable="true"
+                    id="AT"
+                    label="&quot;Account Type&quot;"
+                    value="bankName.SuspectAccType"/>
+                </Row>
+              </RowIterator>
+            </ListViewPanel>
+          </PanelRef>
+        </Card>
+        <Card
+          id="id26"
+          title="&quot;my details&quot;">
+          <DetailViewPanel>
+            <InputColumn>
+              <TextInput
+                editable="true"
+                id="id23"
+                label="&quot;Name&quot;"
+                value="anABContact.Name"
+                visible="true"/>
+            </InputColumn>
+          </DetailViewPanel>
+        </Card>
+        <Card
+          id="names"
+          title="&quot;Names&quot;">
+          <DetailViewPanel>
+            <InputColumn>
+              <TextInput
+                editable="true"
+                id="firstname"
+                label="&quot;First Name&quot;"
+                value="suspectdetails.FirstName"/>
+              <TextInput
+                editable="true"
+                id="middlename"
+                label="&quot;Middle Name&quot;"
+                value="suspectdetails.MiddleName"/>
+              <TextInput
+                editable="true"
+                id="lastname"
+                label="&quot;Last Name&quot;"
+                value="suspectdetails.LastName"/>
+              <TextInput
+                id="fullname"
+                label="&quot;Full Name&quot;"
+                value="suspectdetails.FullName1"/>
+              <TextInput
+                editable="true"
+                id="heightinmeters"
+                label="&quot;Height In Meters&quot;"
+                value="suspectdetails.HeightInMeters"/>
+              <TextInput
+                id="Heightininches"
+                label="&quot;Height In Inches&quot;"
+                value="suspectdetails.HeightInInches1"/>
+            </InputColumn>
+          </DetailViewPanel>
+        </Card>
+        <Card
+          id="password"
+          title="&quot;Password&quot;">
+          <DetailViewPanel>
+            <InputColumn>
+              <!-- <PasswordInput
+                editable="true"
+                id="pwd"
+                label="&quot;Password&quot;"
+                value="suspectdetails.Password"/> -->
+              <ConfirmPasswordInput
+                confirmLabel="&quot;Confirm Password&quot;"
+                editable="true"
+                id="newpassword"
+                label="&quot;New Password&quot;"
+                oldPasswordLabel="&quot;Old Password&quot;"
+                regex="&quot;.+&quot;"
+                requireOldPassword="true"
+                value="suspectdetails.Password"/>
+            </InputColumn>
+          </DetailViewPanel>
+        </Card>
+        <Card
+          id="modes"
+          title="&quot;Modes&quot;">
+          <DetailViewPanel>
+            <InputColumn>
+              <InputSetRef
+                def="SuspectCommonInfo_EXTInputSet()"
+                id="id456"
+                mode="anABContact.Subtype"/>
+            </InputColumn>
+          </DetailViewPanel>
+        </Card>
+      </CardViewPanel>
+    </Screen>
+  </Page>
+</PCF>

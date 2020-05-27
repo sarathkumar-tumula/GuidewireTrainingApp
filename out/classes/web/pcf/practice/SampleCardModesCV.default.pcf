@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <CardViewPanel
+    id="SampleCardModesCV"
+    mode="default">
+    <Card
+      id="card1"
+      title="&quot;mycards&quot;">
+      <DetailViewPanel>
+        <InputColumn>
+          <TextInput
+            id="id1"
+            value="&quot;default doctor&quot;"/>
+        </InputColumn>
+      </DetailViewPanel>
+    </Card>
+  </CardViewPanel>
+</PCF>

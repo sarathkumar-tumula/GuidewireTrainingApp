@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="YesNo1"
+  name="YesNo1">
+  <typecode
+    code="yes"
+    desc="this yes"
+    name="yes"
+    priority="10"/>
+  <typecode
+    code="no"
+    desc="this is no"
+    name="no"
+    priority="20"/>
+  <typecode
+    code="unknown"
+    desc="thisis unknown"
+    name="unknown"
+    priority="30"/>
+  <typefilter
+    desc="Only display Yes and No typelist values"
+    name="YesNoOnly">
+    <include
+      code="no"/>
+    <include
+      code="yes"/>
+  </typefilter>
+</typelist>

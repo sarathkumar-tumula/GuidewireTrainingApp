@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <DetailViewPanel
+    editable="true"
+    id="ABContactSummary3DV"
+    visible="true">
+    <Require
+      name="anABContact"
+      type="ABContact"/>
+    <InputColumn>
+      <Label
+        id="basicinformation"
+        label="&quot;Basic Information&quot;"/>
+      <TextInput
+        id="name"
+        label="&quot;Name   &quot;"
+        value="anABContact.Name"/>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

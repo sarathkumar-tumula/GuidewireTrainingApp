@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <Screen
+    id="SampleScreen">
+    <Require
+      name="anABContact"
+      type="ABContact"/>
+    <CardViewPanel>
+      <Card
+        id="insurance"
+        title="&quot;Insurance&quot;">
+        <DetailViewPanel>
+          <InputColumn>
+            <TextInput
+              editable="true"
+              id="policyno"
+              label="&quot;Policy no&quot;"
+              value="anABContact.Score"/>
+            <BooleanRadioInput
+              editable="true"
+              id="required"
+              label="&quot;Required&quot;"
+              value="anABContact.UpdateScore"/>
+          </InputColumn>
+        </DetailViewPanel>
+      </Card>
+      <Card
+        id="name"
+        title="&quot;Name&quot;"/>
+    </CardViewPanel>
+  </Screen>
+</PCF>

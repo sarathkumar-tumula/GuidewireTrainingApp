@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <DetailViewPanel
+    editable="true"
+    id="SummaryDV"
+    visible="true">
+    <Require
+      name="anABContact"
+      type="ABContact"/>
+    <InputColumn>
+      <Input
+        id="addres"
+        label="&quot;address &quot;"
+        value="&quot;palakonda&quot;"
+        visible="true"/>
+      <Label
+        id="label"
+        label="&quot;BASIC INFORMATION&quot;"/>
+      <TextInput
+        editable="true"
+        id="name"
+        label="displaykey.Training.Name"
+        value="anABContact.Name"
+        visible="true"/>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

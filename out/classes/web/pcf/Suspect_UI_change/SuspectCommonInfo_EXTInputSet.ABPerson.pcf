@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <InputSet
+    id="SuspectCommonInfo_EXTInputSet"
+    mode="ABPerson">
+    <TextInput
+      id="id1"
+      label="&quot;Person Details&quot;"
+      value="&quot;Default data&quot;"/>
+    <TextInput
+      id="id2"
+      label="&quot;Person Info&quot;"
+      value="&quot;Sample data&quot;"/>
+  </InputSet>
+</PCF>

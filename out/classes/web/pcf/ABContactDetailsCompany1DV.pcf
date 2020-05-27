@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <DetailViewPanel
+    id="ABContactDetailsCompany1DV">
+    <InputColumn>
+      <InputSet
+        editable="true"
+        id="FinancialPersonnelInputSet">
+        <Variable
+          name="abABContact"
+          type="ABContact"/>
+        <Label
+          id="label"
+          label="&quot;Inpuset example&quot;"/>
+      </InputSet>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

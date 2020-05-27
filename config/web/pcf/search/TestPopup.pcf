@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <Popup
+    id="TestPopup"
+    title="&quot;Test Popup&quot;">
+    <Screen>
+      <DetailViewPanel
+        id="testDV">
+        <InputColumn>
+          <TextInput
+            id="accountno"
+            label="&quot;Account Number&quot;"
+            value="&quot;AC12455&quot;"/>
+        </InputColumn>
+      </DetailViewPanel>
+    </Screen>
+  </Popup>
+</PCF>

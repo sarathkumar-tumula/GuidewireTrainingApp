@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="Status"
+  name="Status">
+  <typecode
+    code="completed"
+    desc="completed"
+    name="completed"/>
+  <typecode
+    code="pending"
+    desc="pending"
+    name="pending"/>
+  <typecode
+    code="processing"
+    desc="processing"
+    name="processing"/>
+</typelist>

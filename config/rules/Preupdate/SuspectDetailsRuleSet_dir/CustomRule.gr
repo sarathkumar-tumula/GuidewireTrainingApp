@@ -1,0 +1,18 @@
+package rules.Preupdate.SuspectDetailsRuleSet_dir
+
+@gw.rules.RuleName("CustomRule")
+internal class CustomRule {
+  static function doCondition(suspectDetails_ext : entity.SuspectDetails_ext) : boolean {
+/*start00rule*/
+return suspectDetails_ext.New
+/*end00rule*/
+}
+
+  static function doAction(suspectDetails_ext : entity.SuspectDetails_ext, actions : gw.rules.Action) {
+/*start00rule*/
+
+
+
+/*end00rule*/
+  }
+}

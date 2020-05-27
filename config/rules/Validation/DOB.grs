@@ -1,0 +1,13 @@
+package rules.Validation
+
+@gw.rules.RuleName("DOB")
+@gw.rules.RuleSetDescription("date of birth")
+class DOB extends gw.rules.RuleSetBase {
+  static function invoke(bean : entity.SuspectDetails_ext) : gw.rules.ExecutionSession {
+    return invoke( new gw.rules.ExecutionSession(), bean )
+  }
+
+  static function invoke(exeSession : gw.rules.ExecutionSession, bean : entity.SuspectDetails_ext) : gw.rules.ExecutionSession {
+    return _invoke( exeSession, bean, "DOB", DOB )
+  }
+}

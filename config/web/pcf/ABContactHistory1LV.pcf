@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <ListViewPanel
+    id="ABContactHistory1LV">
+    <Require
+      name="anABContact"
+      type="ABContact"/>
+    <RowIterator
+      editable="true"
+      elementName="currentHistoryEntry"
+      value="anABContact.HistoryEntries">
+      <IteratorSort
+        sortBy="currentHistoryEntry.CreateTime"
+        sortDirection="descending"
+        sortOrder="1"/>
+      <Row>
+        <DateCell
+          id="CreateTime"
+          label="displaykey.Training.Date"
+          value="currentHistoryEntry.CreateTime"/>
+        <TypeKeyCell
+          id="Eventtype"
+          label="displaykey.Training.EventType"
+          value="currentHistoryEntry.EventType"/>
+        <Cell
+          id="Description"
+          label="displaykey.Training.Description"
+          value="currentHistoryEntry.Description"/>
+      </Row>
+    </RowIterator>
+  </ListViewPanel>
+</PCF>

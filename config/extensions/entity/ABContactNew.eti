@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="ABContactNew"
+  table="abcontactnew"
+  type="retireable">
+  <column
+    name="Name"
+    nullok="true"
+    type="varchar">
+    <columnParam
+      name="size"
+      value="100"/>
+  </column>
+  <foreignkey
+    columnName="AssignedUserID"
+    fkentity="User"
+    name="AssignedUser"
+    nullok="true"/>
+</entity>

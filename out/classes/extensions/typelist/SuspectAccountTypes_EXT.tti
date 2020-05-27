@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="SuspectAccountTypes_EXT"
+  name="SuspectAccountTypes_EXT">
+  <typecode
+    code="current"
+    desc="current"
+    name="current"/>
+  <typecode
+    code="savings"
+    desc="savings"
+    name="savings"/>
+  <typecode
+    code="corporate"
+    desc="corporate"
+    name="corporate"/>
+  <typecode
+    code="other"
+    desc="other"
+    name="other"/>
+</typelist>

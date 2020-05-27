@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<entity xmlns="http://guidewire.com/datamodel" entity="Building1_EXT" table="building1_ext" type="retireable">
+</entity>

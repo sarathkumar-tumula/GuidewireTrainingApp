@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <Page
+    canEdit="true"
+    id="ModesExample"
+    title="&quot;Modes Example&quot;">
+    <LocationEntryPoint
+      signature="ModesExample(anABContact:ABContact)"/>
+    <Variable
+      name="anABContact"
+      type="ABContact"/>
+    <Variable
+      initialValue="new SuspectDetails_ext()"
+      name="suspectdetails"
+      type="SuspectDetails_ext"/>
+    <Variable
+      initialValue="new VendorEvaluation()"
+      name="aVendorEvaluation"
+      type="VendorEvaluation"/>
+    <Variable
+      initialValue="new Clientex()"
+      name="clientex"
+      type="Clientex"/>
+    <Screen>
+      <Toolbar>
+        <EditButtons/>
+      </Toolbar>
+      <CardViewPanel>
+        <Card
+          id="id789"
+          title="&quot;modes1&quot;">
+          <DetailViewPanel>
+            <InputColumn>
+              <InputSetRef
+                def="ModesExInputSet()"
+                mode="anABContact.Subtype"/>
+            </InputColumn>
+          </DetailViewPanel>
+        </Card>
+        <Card
+          id="partial"
+          title="&quot;Serverside&quot;">
+          <DetailViewPanel>
+            <InputColumn>
+              <BooleanRadioInput
+                editable="true"
+                id="investigationneede"
+                label="&quot;Investigation Needed&quot;"
+                value="suspectdetails.InvestigationNeeded">
+                <PostOnChange/>
+              </BooleanRadioInput>
+              <DateInput
+                editable="true"
+                id="investigationDate"
+                label="&quot;InvestigationDate&quot;"
+                value="suspectdetails.InvestigationDate"
+                visible="suspectdetails.InvestigationNeeded==true"/>
+              <TextInput
+                editable="true"
+                id="emailaddress"
+                label="&quot;Email Address&quot;"
+                value="anABContact.EmailAddress1">
+                <PostOnChange/>
+              </TextInput>
+              <TextInput
+                editable="anABContact.EmailAddress1!=null"
+                id="alternativeemail"
+                label="&quot;Alternative Email&quot;"
+                value="anABContact.EmailAddress2"/>
+              <TextInput
+                editable="true"
+                id="licenceno"
+                label="&quot;Driver's License&quot;"
+                value="(anABContact as ABPerson).LicenseNumber">
+                <PostOnChange/>
+              </TextInput>
+              <TypeKeyInput
+                editable="true"
+                id="licensestate"
+                label="&quot;State&quot;"
+                required="(anABContact as ABPerson).LicenseNumber!=null"
+                value="(anABContact as ABPerson).LicenseState"/>
+            </InputColumn>
+          </DetailViewPanel>
+        </Card>
+        <Card
+          id="clientside"
+          title="&quot;ClientSide&quot;">
+          <PanelRef
+            def="VendorEvaluationDV(aVendorEvaluation)"/>
+        </Card>
+        <Card
+          id="client"
+          title="&quot;ClientExample&quot;">
+          <PanelRef
+            def="ClidentSideDV(clientex)"/>
+        </Card>
+      </CardViewPanel>
+    </Screen>
+  </Page>
+</PCF>

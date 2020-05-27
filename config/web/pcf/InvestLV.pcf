@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <ListViewPanel
+    available="true"
+    editable="true"
+    id="InvestLV"
+    visible="true">
+    <Require
+      name="claim"
+      type="Claim"/>
+    <ExposeIterator
+      valueType="entity.SIUinvestigation"
+      widget="InvestLV"/>
+    <RowIterator
+      editable="true"
+      elementName="Invest"
+      toAdd="claim.addToSIUinvestigation(Invest)"
+      toRemove="claim.removeFromSIUinvestigation(Invest)"
+      value="claim.SIUinvestigation"
+      visible="true">
+      <Row>
+        <Cell
+          editable="true"
+          id="sno"
+          label="&quot;SNO&quot;"
+          value="Invest.SNO"/>
+        <Cell
+          editable="true"
+          id="date"
+          label="&quot;date&quot;"
+          value="Invest.DateCreation"/>
+        <Cell
+          editable="true"
+          id="typeoftask"
+          label="&quot;typeoftask&quot;"
+          value="Invest.Typeoftask"/>
+        <Cell
+          editable="true"
+          id="performed"
+          label="&quot;Performed&quot;"
+          value="Invest.Performed"/>
+        <Cell
+          id="dateassignemtn"
+          label="&quot;Date Assignment&quot;"
+          value="Invest.Date"/>
+        <Cell
+          editable="true"
+          id="assignedt"
+          label="&quot;Assigned to&quot;"
+          value="Invest.Assignedto"/>
+      </Row>
+    </RowIterator>
+  </ListViewPanel>
+</PCF>

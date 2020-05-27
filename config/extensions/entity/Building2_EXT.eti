@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  desc="captures the details about buildings"
+  entity="Building2_EXT"
+  table="building2"
+  type="retireable">
+  <column
+    name="Description"
+    nullok="true"
+    type="varchar">
+    <columnParam
+      name="size"
+      value="150"/>
+  </column>
+  <column
+    name="Hasparking"
+    nullok="true"
+    type="bit"/>
+  <column
+    name="Inspectiondate"
+    nullok="true"
+    type="datetime"/>
+  <column
+    name="NumberofEmployes"
+    nullok="true"
+    type="integer"/>
+  <typekey
+    name="Buildingtype"
+    nullok="true"
+    typelist="BuildingType_Ext"/>
+</entity>

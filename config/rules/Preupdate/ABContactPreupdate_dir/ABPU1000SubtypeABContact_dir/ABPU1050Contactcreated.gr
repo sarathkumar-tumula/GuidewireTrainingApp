@@ -1,0 +1,21 @@
+package rules.Preupdate.ABContactPreupdate_dir.ABPU1000SubtypeABContact_dir
+
+
+@gw.rules.RuleName("ABPU1050 - Contact created")
+internal class ABPU1050Contactcreated {
+  static function doCondition(aBContact : entity.ABContact) : boolean {
+/*start00rule*/
+return aBContact.New and ScriptParameters.RecordInHistory_ContactFlags
+/*end00rule*/
+}
+
+  static function doAction(aBContact : entity.ABContact, actions : gw.rules.Action) {
+/*start00rule*/
+var newEntry = new HistoryEntry()
+   newEntry.EventType =  HistoryEventType.TC_CREATED
+   newEntry.Description = "our contact is  " + aBContact.DisplayName + " created"
+
+   aBContact.addToHistoryEntries(newEntry) 
+/*end00rule*/
+  }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <DetailViewPanel
+    editable="true"
+    id="InvneededDV">
+    <Require
+      name="claim"
+      type="Claim"/>
+    <InputColumn>
+      <BooleanRadioInput
+        editable="true"
+        id="investigtionneded"
+        label="&quot;Investigation Needed&quot;"
+        value="claim.Investigationneeded"/>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

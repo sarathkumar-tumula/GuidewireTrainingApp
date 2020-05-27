@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <DetailViewPanel
+    editable="true"
+    id="DropDownDV">
+    <Require
+      name="anABContact"
+      type="ABContact"/>
+    <InputColumn>
+      <RangeInput
+        editable="true"
+        id="primarycontact"
+        label="displaykey.Training.PrimaryContact"
+        value="(anABContact as ABCompany).PrimaryContact"
+        valueRange="(anABContact as ABCompany).Employees"/>
+      <TextInput
+        id="text"
+        label="displaykey.Training.FullName"
+        value="(anABContact as ABCompany).Name"/>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

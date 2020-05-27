@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <CardViewPanel
+    id="detailsCV">
+    <Require
+      name="anABContact"
+      type="ABContact"/>
+    <Card
+      id="CompanyInfoCard"
+      title="displaykey.Training.CompanyInfoCard">
+      <PanelRef
+        def="SummaryDV(anABContact)"/>
+    </Card>
+    <Card
+      id="PhoneAddressesCard"
+      title="displaykey.Training.PhoneAddressesCard"/>
+    <Card
+      id="BankAccountsCard"
+      title="displaykey.Training.BankAccounts"/>
+  </CardViewPanel>
+</PCF>

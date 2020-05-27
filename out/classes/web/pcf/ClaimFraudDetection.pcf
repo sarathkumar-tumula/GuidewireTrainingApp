@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <Page
+    canEdit="true"
+    id="ClaimFraudDetection"
+    title="&quot;ClaimFraudDetection&quot;">
+    <LocationEntryPoint
+      signature="ClaimFraudDetection(anABContact:ABContact)"/>
+    <Variable
+      initialValue="new claim()"
+      name="claimfraud"
+      type="claim"/>
+    <Variable
+      initialValue="new Claim()"
+      name="claim"
+      type="Claim"/>
+    <Variable
+      name="anABContact"
+      type="ABContact"/>
+    <Screen
+      editable="true">
+      <Toolbar>
+        <EditButtons/>
+        <ToolbarButton
+          action="ExamplePopup.push()"
+          id="ToolbarButton"
+          label="&quot;callmybutton&quot;"/>
+      </Toolbar>
+      <CardViewPanel
+        id="claimfraudCV">
+        <Card
+          id="suspect"
+          title="&quot;Suspect&quot;">
+          <PanelRef
+            def="Investigation(claim)"/>
+        </Card>
+        <Card
+          id="inforamtion"
+          title="&quot;Information&quot;">
+          <DetailViewPanel>
+            <InputColumn>
+              <BooleanRadioInput
+                editable="true"
+                id="siuanalysis"
+                label="&quot;SIU Analysis&quot;"
+                value="claimfraud.SIUAnalysis"/>
+              <BooleanRadioInput
+                editable="true"
+                id="investigationneeded"
+                label="&quot;Investigation needed&quot;"
+                value="claimfraud.Investigationneeded"/>
+              <DateInput
+                editable="true"
+                id="daterequest"
+                label="&quot;Date request&quot;"
+                value="claimfraud.Daterequest"/>
+              <TextAreaInput
+                editable="true"
+                id="textarea"
+                label="&quot;Comments&quot;"
+                numCols="25"
+                numRows="5"
+                value="claimfraud.comments"/>
+              <Label
+                id="manualfrauddetection"
+                label="&quot;MANUAL FRAUD DETECTION&quot;"/>
+              <TextAreaInput
+                editable="true"
+                id="comments2"
+                label="&quot;Comments&quot;"
+                numCols="25"
+                numRows="5"
+                value="claimfraud.comments2"/>
+            </InputColumn>
+            <InputColumn>
+              <BooleanRadioInput
+                editable="true"
+                id="Atomaticdetectioin"
+                label="&quot;Atomatic detectioin&quot;"
+                value="claimfraud.Atomaticdetectioin"/>
+              <TypeKeyInput
+                editable="true"
+                id="internaldetection"
+                label="&quot;Internal detection&quot;"
+                value="claimfraud.Internaldetection"/>
+              <TextInput
+                editable="true"
+                id="detector"
+                label="&quot;Detector&quot;"
+                value="claimfraud.Detector"/>
+              <TypeKeyInput
+                editable="true"
+                id="externaldetection"
+                label="&quot;External Detection&quot;"
+                value="claimfraud.Externaldetection"/>
+              <TextInput
+                editable="true"
+                id="externalinformation"
+                label="&quot;External Information&quot;"
+                value="claimfraud.Externalinformation"/>
+              <TypeKeyInput
+                editable="true"
+                id="performed"
+                label="&quot;Performed&quot;"
+                value="claimfraud.Internaldetection"/>
+              <TypeKeyInput
+                editable="true"
+                id="assigned"
+                label="&quot;Assigned&quot;"
+                value="claimfraud.Internaldetection"/>
+            </InputColumn>
+          </DetailViewPanel>
+        </Card>
+        <Card
+          id="businessprocess"
+          title="&quot;Business process&quot;"/>
+        <Card
+          id="overview"
+          title="&quot;Overview&quot;"/>
+        <Card
+          id="siuinvestigation"
+          title="&quot;S.I.U investigation&quot;">
+          <PanelRef
+            available="true"
+            def="InvestLV(claim)"
+            editable="true">
+            <Toolbar>
+              <ToolbarButton
+                action="null"
+                available="CurrentLocation.InEditMode"
+                id="newtask"
+                label="&quot;New Task&quot;"
+                visible="claim.Investigationneeded==true"/>
+              <IteratorButtons
+                iterator="InvestLV.InvestLV"/>
+            </Toolbar>
+            <DetailViewPanel
+              editable="true">
+              <InputColumn>
+                <BooleanRadioInput
+                  editable="true"
+                  id="investigationneed"
+                  label="&quot;Investigation needed&quot;"
+                  value="Claim.Investigationneeded"
+                  visible="true">
+                  <PostOnChange/>
+                </BooleanRadioInput>
+              </InputColumn>
+            </DetailViewPanel>
+          </PanelRef>
+          <PanelRef
+            available="true"
+            def="SelectedInvestigationCV(claim)"
+            editable="true"/>
+        </Card>
+        <Card
+          id="id4"
+          title="&quot;SpouseDetails&quot;">
+          <DetailViewPanel>
+            <Variable
+              initialValue="new SpouseDetails()"
+              name="spousedetails"
+              type="SpouseDetails"/>
+            <InputColumn>
+              <TextInput
+                editable="true"
+                id="firstname"
+                label="&quot;First Name&quot;"
+                value="spousedetails.FirstName"/>
+              <TextInput
+                editable="true"
+                id="lastname"
+                label="displaykey.LastName"
+                value="spousedetails.LastName"/>
+            </InputColumn>
+          </DetailViewPanel>
+        </Card>
+      </CardViewPanel>
+    </Screen>
+  </Page>
+</PCF>

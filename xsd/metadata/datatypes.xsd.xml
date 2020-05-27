@@ -1,0 +1,34 @@
+<DataTypes>
+  <!--You have a CHOICE of the next 31 items at this level-->
+  <ClaimNumberDataType length="100" validator="string"/>
+  <PostalCodeDataType length="100" validator="string"/>
+  <MoneyDataType precision="100" scale="100" appscale="100" validator="string"/>
+  <RiskDataType precision="100" scale="100" validator="string"/>
+  <ExmodDataType precision="100" scale="100" validator="string"/>
+  <SpeedDataType validator="string"/>
+  <PhoneDataType length="100" validator="string"/>
+  <YearDataType validator="string"/>
+  <PolicyNumberDataType length="100" validator="string"/>
+  <VINDataType length="100" validator="string"/>
+  <CollotaralAmountDataType length="4" validator="integer"/>
+  <FirstNameDataType length="100" validator="string"/>
+  <LastNameDataType length="100" validator="string"/>
+  <CompanyNameDataType length="100" validator="string"/>
+  <SSNDataType length="100" validator="string"/>
+  <DriverLicenseDataType length="100" validator="string"/>
+  <ContactIdentifierDataType length="100" validator="string"/>
+  <EmploymentClassificationDataType length="100" validator="string"/>
+  <PercentageDecDataType precision="100" scale="100" validator="string"/>
+  <DaysWorkedWeekDataType precision="100" scale="100" validator="string"/>
+  <HoursWorkedDayDataType precision="100" scale="100" validator="string"/>
+  <AccountDataType length="100" validator="string"/>
+  <AddressLineDataType length="100" validator="string"/>
+  <RateDataType precision="100" scale="100" validator="string"/>
+  <RatingLineBasisAmountDataType precision="100" scale="100" validator="string"/>
+  <ProrationFactorDataType precision="100" scale="100" validator="string"/>
+  <CreditCardNumberDataType length="100" validator="string"/>
+  <DunAndBradstreetNumberDataType length="100" validator="string"/>
+  <ExchangeRateDataType precision="100" scale="100" validator="string"/>
+  <MediumTextDataType length="100" validator="string"/>
+  <CustomizedDataType name="string" length="100" precision="100" scale="100" appscale="100" validator="string"/>
+</DataTypes>

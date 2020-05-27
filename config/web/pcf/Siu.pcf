@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <Page
+    canEdit="true"
+    id="Siu"
+    startInEditMode="true"
+    title="&quot;Siupage&quot;">
+    <LocationEntryPoint
+      signature="Siu(anABContact:ABContact)"/>
+    <Variable
+      name="anABContact"
+      type="ABContact"/>
+    <Variable
+      name="claim"
+      type="Claim"/>
+    <Screen
+      editable="true">
+      <Toolbar>
+        <EditButtons/>
+      </Toolbar>
+      <DetailViewPanel>
+        <InputColumn>
+          <BooleanRadioInput
+            editable="true"
+            id="investigationneede"
+            label="&quot;Investigattion Needed&quot;"
+            value="Claim.Investigationneeded"/>
+        </InputColumn>
+      </DetailViewPanel>
+      <PanelRef
+        def="Investigation(claim)">
+        <Toolbar/>
+      </PanelRef>
+    </Screen>
+  </Page>
+</PCF>

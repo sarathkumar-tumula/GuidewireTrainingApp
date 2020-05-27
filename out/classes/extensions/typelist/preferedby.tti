@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="preferedby"
+  name="preferedby">
+  <typecode
+    code="Internally"
+    desc="internally"
+    name="internally"/>
+  <typecode
+    code="Externally"
+    desc="externally"
+    name="externally"/>
+</typelist>

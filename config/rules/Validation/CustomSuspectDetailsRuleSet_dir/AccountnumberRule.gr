@@ -1,0 +1,27 @@
+package rules.Validation.CustomSuspectDetailsRuleSet_dir
+
+@gw.rules.RuleName("AccountnumberRule")
+internal class AccountnumberRule {
+  static function doCondition(suspectDetails_ext : entity.SuspectDetails_ext) : boolean {
+/*start00rule*/
+return suspectDetails_ext.SuspectAccounts.length>0
+/*end00rule*/
+}
+
+  static function doAction(suspectDetails_ext : entity.SuspectDetails_ext, actions : gw.rules.Action) {
+/*start00rule*/
+
+      if(suspectDetails_ext.SuspectAccounts.AccountNumber==null)
+      {
+
+          suspectDetails_ext.reject("loadsave",
+          displaykey.Validation.SuspectDetails_ext.AccountNumber,null,null)
+      }
+
+
+
+
+
+/*end00rule*/
+  }
+}

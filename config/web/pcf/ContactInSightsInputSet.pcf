@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <InputSet
+    id="ContactInSightsInputSet">
+    <Require
+      name="anABContact"
+      type="ABContact"/>
+    <Label
+      id="ContactInSights"
+      label="&quot;ContactInSights&quot;"/>
+    <TextInput
+      id="Name"
+      label="&quot;Name&quot;"
+      value="anABContact.DisplayName"/>
+    <BooleanRadioInput
+      id="updatescore"
+      label="&quot;updatescore&quot;"
+      value="(anABContact as ABCompany).PrimaryContact.PrefersContactByEmail"/>
+  </InputSet>
+</PCF>

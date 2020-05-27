@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <CardViewPanel
+    id="SelectedInvestigationCV">
+    <Require
+      name="claim"
+      type="Claim"/>
+    <Variable
+      initialValue="new SIUinvestigation()"
+      name="siuinvestigation"
+      type="SIUinvestigation"/>
+    <Card
+      id="selectedinvest"
+      title="&quot;selectedinvestigation&quot;">
+      <DetailViewPanel>
+        <InputColumn>
+          <Label
+            id="assignment"
+            label="&quot;Assignment&quot;"/>
+          <DateInput
+            editable="true"
+            id="dateassignment"
+            label="&quot;Date Assignment&quot;"
+            value="siuinvestigation.Date"/>
+          <TypeKeyInput
+            editable="true"
+            id="performed"
+            label="&quot;Performed&quot;"
+            value="siuinvestigation.performed"/>
+          <TypeKeyInput
+            editable="true"
+            id="typeoftask"
+            label="&quot;Type of task&quot;"
+            value="siuinvestigation.Typeoftask"/>
+          <TypeKeyInput
+            editable="true"
+            id="assignedto"
+            label="&quot;Assigned to&quot;"
+            required="true"
+            value="siuinvestigation.Assignedto"/>
+          <TextAreaInput
+            editable="true"
+            id="comments"
+            label="&quot;Comments&quot;"
+            numCols="25"
+            numRows="5"
+            value="siuinvestigation.comments"/>
+        </InputColumn>
+        <InputColumn>
+          <Label
+            id="execution"
+            label="&quot;Execution&quot;"/>
+          <DateInput
+            editable="true"
+            id="dateofthereport"
+            label="&quot;Date of the report&quot;"
+            value="siuinvestigation.Date"/>
+          <TextInput
+            editable="true"
+            id="investigationcost"
+            label="&quot;Investigation Cost&quot;"
+            value="siuinvestigation.Investigationcost"/>
+          <TypeKeyInput
+            editable="true"
+            id="typology"
+            label="&quot;typology&quot;"
+            value="siuinvestigation.typology"/>
+          <TextAreaInput
+            editable="true"
+            id="comment"
+            label="&quot;Comments&quot;"
+            numCols="25"
+            numRows="5"
+            value="siuinvestigation.comments"/>
+        </InputColumn>
+        <InputColumn>
+          <Label
+            id="siurecommendation"
+            label="&quot;S.I.U Recommendation&quot;"/>
+          <TypeKeyInput
+            editable="true"
+            id="conclusion"
+            label="&quot;Conclusion&quot;"
+            value="siuinvestigation.Conclusion"/>
+          <TypeKeyInput
+            editable="true"
+            id="ethiasshouldpay"
+            label="&quot;Ethias Should pay&quot;"
+            value="siuinvestigation.Ethiasshouldpay"/>
+        </InputColumn>
+      </DetailViewPanel>
+    </Card>
+  </CardViewPanel>
+</PCF>

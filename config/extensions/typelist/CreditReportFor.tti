@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="CreditReportFor"
+  name="CreditReportFor">
+  <typecode
+    code="FrankManson"
+    desc="FrankManson"
+    name="FrankManson"/>
+  <typecode
+    code="kumar"
+    desc="kumar"
+    name="kumar"/>
+  <typecode
+    code="Manoj"
+    desc="Manoj"
+    name="Manoj"/>
+</typelist>

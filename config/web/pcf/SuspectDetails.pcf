@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <Page
+    canEdit="true"
+    id="SuspectDetails"
+    title="'suspect'">
+    <LocationEntryPoint
+      signature="SuspectDetails(anABContact:ABContact)"/>
+    <Variable
+      initialValue="new SuspectAddress_EXT()"
+      name="suspectaddress"
+      type="SuspectAddress_EXT"/>
+    <Variable
+      name="anABContact"
+      type="ABContact"/>
+    <Variable
+      initialValue="new SuspectDetails_ext()"
+      name="suspectdetails"
+      type="SuspectDetails_ext"/>
+    <Screen>
+      <Toolbar>
+        <EditButtons/>
+      </Toolbar>
+      <DetailViewPanel>
+        <InputColumn>
+          <TextInput
+            editable="true"
+            id="id1"
+            label="&quot;AddressLine1&quot;"
+            value="suspectaddress.AddressLine1">
+            <PostOnChange/>
+          </TextInput>
+          <TextInput
+            editable="true"
+            id="id2"
+            label="&quot;AddressLine2&quot;"
+            value="suspectaddress.AddressLine2">
+            <PostOnChange/>
+          </TextInput>
+          <TextInput
+            editable="true"
+            id="id3"
+            label="&quot;City&quot;"
+            value="suspectaddress.City">
+            <PostOnChange/>
+          </TextInput>
+          <TextInput
+            id="id4"
+            label="&quot;AddressLine 1/2 and state&quot;"
+            value="completeAddress()">
+            <PostOnChange/>
+          </TextInput>
+          <TextInput
+            id="id78"
+            label="&quot;suspect default name&quot;"
+            value="suspectdetails.DisplayName">
+            <PostOnChange/>
+          </TextInput>
+          <TextInput
+            editable="true"
+            id="id79"
+            label="&quot;suspect name&quot;"
+            value="suspectdetails.suspectname">
+            <PostOnChange/>
+          </TextInput>
+          <TextInput
+            editable="true"
+            id="id80"
+            label="&quot;suspect details&quot;"
+            value="suspectdetails.suspectdetails"/>
+        </InputColumn>
+      </DetailViewPanel>
+    </Screen>
+    <Code><![CDATA[function completeAddress() : String
+{
+      return suspectaddress.AddressLine1+suspectaddress.AddressLine2+suspectaddress.City
+  
+}]]></Code>
+  </Page>
+</PCF>

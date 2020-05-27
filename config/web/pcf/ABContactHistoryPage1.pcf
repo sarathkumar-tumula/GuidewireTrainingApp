@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <Page
+    canEdit="true"
+    canVisit="true"
+    id="ABContactHistoryPage1"
+    title="displaykey.Training.History">
+    <LocationEntryPoint
+      signature="ABContactHistoryPage1(anABContact:ABContact)"/>
+    <Variable
+      name="anABContact"
+      type="ABContact"/>
+    <Screen>
+      <Toolbar>
+        <EditButtons/>
+      </Toolbar>
+      <DetailViewPanel
+        editable="true">
+        <Variable
+          name="anABContact"
+          type="ABContact"/>
+        <InputColumn>
+          <TextInput
+            editable="true"
+            id="name"
+            label="&quot;Name&quot;"
+            value="anABContact.Name"/>
+        </InputColumn>
+      </DetailViewPanel>
+    </Screen>
+  </Page>
+</PCF>

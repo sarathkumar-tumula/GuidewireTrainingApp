@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Entity
+  name="CreditReporting">
+  <Columns>
+    <Column
+      beanPath="CreditReporting.CreditReportFor"
+      name="creditreportfor"/>
+  </Columns>
+  <DisplayName><![CDATA[return creditreportfor]]></DisplayName>
+</Entity>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="Demo"
+  table="demo"
+  type="retireable">
+  <column
+    name="no"
+    nullok="true"
+    type="integer"/>
+  <column
+    name="country"
+    nullok="true"
+    type="varchar">
+    <columnParam
+      name="size"
+      value="30"/>
+  </column>
+  <array
+    arrayentity="location"
+    arrayfield="loc"
+    name="location"/>
+</entity>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <InputSet
+    id="EmailAddressInputSet">
+    <Variable
+      name="anABContact"
+      recalculateOnRefresh="true"
+      type="ABContact"/>
+    <Label
+      id="id25"
+      label="&quot;Email Addresses&quot;"/>
+    <TextInput
+      editable="true"
+      id="id31"
+      label="&quot;Main&quot;"
+      value="anABContact.EmailAddress1"/>
+    <TextInput
+      editable="true"
+      id="id38"
+      label="&quot;Alternative&quot;"
+      value="anABContact.EmailAddress2"/>
+  </InputSet>
+</PCF>

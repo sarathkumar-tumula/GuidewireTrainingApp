@@ -1,0 +1,16 @@
+package rules.Validation.CustomSuspectDetailsRuleSet_dir
+
+@gw.rules.RuleName("Preferences")
+internal class Preferences {
+  static function doCondition(suspectDetails_ext : entity.SuspectDetails_ext) : boolean {
+/*start00rule*/
+return suspectDetails_ext.suspectpreferences==null
+/*end00rule*/
+}
+
+  static function doAction(suspectDetails_ext : entity.SuspectDetails_ext, actions : gw.rules.Action) {
+/*start00rule*/
+ suspectDetails_ext.rejectField("suspectpreferences",null,null,"loadsave",displaykey.Validation.SuspectDetails_ext.suspectpreferences)
+/*end00rule*/
+  }
+}

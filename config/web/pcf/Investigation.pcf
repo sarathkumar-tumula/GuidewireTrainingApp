@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../pcf.xsd">
+  <ListDetailPanel
+    id="Investigation"
+    selectionName="siuinvest"
+    selectionType="SIUinvestigation">
+    <Require
+      name="claim"
+      type="Claim"/>
+    <PanelRef
+      available="CurrentLocation.InEditMode"
+      def="InvneededDV(claim)"
+      editable="true"
+      visible="true"/>
+    <PanelRef
+      def="InvestLV(claim)">
+      <Toolbar>
+        <IteratorButtons
+          iterator="InvestLV.InvestLV"/>
+      </Toolbar>
+    </PanelRef>
+    <PanelRef
+      def="SelectedInvestigationCV(claim)"/>
+  </ListDetailPanel>
+</PCF>

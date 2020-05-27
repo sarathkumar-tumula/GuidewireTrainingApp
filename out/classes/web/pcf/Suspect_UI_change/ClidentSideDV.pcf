@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <DetailViewPanel
+    id="ClidentSideDV">
+    <Require
+      name="clientex"
+      type="ClientEx"/>
+    <InputColumn>
+      <TextInput
+        editable="true"
+        id="val1"
+        label="&quot;Value1&quot;"
+        value="clientex.Value1"/>
+      <TextInput
+        editable="true"
+        id="val2"
+        label="&quot;Value2&quot;"
+        value="clientex.Value2"/>
+      <TextInput
+        editable="true"
+        id="val3"
+        label="&quot;Value3&quot;"
+        value="clientex.Value3"/>
+      <TextInput
+        id="totalvalue"
+        label="&quot;Total Value&quot;"
+        value="clientex.Total">
+        <PostOnChange
+          target="DATA_ONLY"/>
+      </TextInput>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

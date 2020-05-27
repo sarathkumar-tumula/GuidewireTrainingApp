@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="location"
+  table="location"
+  type="retireable">
+  <foreignkey
+    fkentity="Demo"
+    name="loc"
+    nullok="true"/>
+</entity>

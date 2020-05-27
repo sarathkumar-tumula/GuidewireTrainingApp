@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  desc="student"
+  entity="Student"
+  table="student"
+  type="retireable">
+  <array
+    arrayentity="Professor"
+    name="Professerdetails"/>
+  <column
+    name="Name"
+    nullok="true"
+    type="varchar">
+    <columnParam
+      name="size"
+      value="15"/>
+  </column>
+  <typekey
+    name="gender"
+    nullok="true"
+    typelist="Gender"/>
+</entity>

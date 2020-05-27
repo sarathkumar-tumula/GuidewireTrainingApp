@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="Performed"
+  name="Performed">
+  <typecode
+    code="Internally"
+    desc="Internally"
+    name="Internally"
+    priority="10"/>
+  <typecode
+    code="Externally"
+    desc="Externally"
+    name="Externally"
+    priority="20"/>
+</typelist>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="SPinvestigation"
+  table="spinvestigation"
+  type="retireable">
+  <column
+    name="sno"
+    nullok="true"
+    type="integer"/>
+  <column
+    name="Datecreation"
+    nullok="true"
+    type="dateonly"/>
+  <column
+    name="Typetask"
+    nullok="true"
+    type="varchar">
+    <columnParam
+      name="size"
+      value="20"/>
+  </column>
+  <typekey
+    name="performed"
+    nullok="true"
+    typelist="Internaldetection"/>
+  <column
+    name="Dateassiggnment"
+    nullok="true"
+    type="dateonly"/>
+  <typekey
+    name="Internaldetection"
+    nullok="true"
+    typefilter="yesnoonly"
+    typelist="Internaldetection"/>
+</entity>

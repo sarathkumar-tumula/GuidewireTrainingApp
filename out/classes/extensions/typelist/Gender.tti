@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="Gender"
+  name="Gender">
+  <typecode
+    code="male"
+    desc="male"
+    name="male"/>
+  <typecode
+    code="female"
+    desc="female"
+    name="female"/>
+</typelist>

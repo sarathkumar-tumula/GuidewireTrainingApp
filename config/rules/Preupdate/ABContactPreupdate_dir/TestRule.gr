@@ -1,0 +1,17 @@
+package rules.Preupdate.ABContactPreupdate_dir
+
+@gw.rules.RuleName("TestRule")
+internal class TestRule {
+  static function doCondition(aBContact : entity.ABContact) : boolean {
+/*start00rule*/
+return aBContact.EmailAddress1==null
+/*end00rule*/
+}
+
+  static function doAction(aBContact : entity.ABContact, actions : gw.rules.Action) {
+/*start00rule*/
+
+ aBContact.PrefersContactByEmail=true
+/*end00rule*/
+  }
+}

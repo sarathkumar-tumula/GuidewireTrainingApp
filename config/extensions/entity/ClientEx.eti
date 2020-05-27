@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="ClientEx"
+  table="clientex"
+  type="retireable">
+  <column
+    name="Value1"
+    nullok="true"
+    type="integer"/>
+  <column
+    name="Value2"
+    nullok="true"
+    type="integer"/>
+  <column
+    name="Value3"
+    nullok="true"
+    type="integer"/>
+  <column
+    name="Total"
+    nullok="true"
+    type="integer"/>
+</entity>

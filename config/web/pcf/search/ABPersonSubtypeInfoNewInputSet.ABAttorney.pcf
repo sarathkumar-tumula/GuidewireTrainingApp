@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <InputSet
+    id="ABPersonSubtypeInfoNewInputSet"
+    mode="ABAttorney">
+    <Require
+      name="anContact"
+      type="ABContact"/>
+    <Variable
+      name="addressOwner"
+      type="gw.api.address.AddressOwner"/>
+    <TypeKeyInput
+      confirmMessage="displaykey.RangeInputAddress.CountryChangeWarning"
+      id="Country"
+      label="displaykey.Web.AddressBook.AddressInputSet.Country"
+      showConfirmMessage="false"
+      value="addressOwner.SelectedCountry"
+      valueWidth="228"/>
+  </InputSet>
+</PCF>

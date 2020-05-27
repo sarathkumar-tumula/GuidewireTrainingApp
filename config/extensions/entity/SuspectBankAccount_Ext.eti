@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  desc="this is bank accounts"
+  entity="SuspectBankAccount_Ext"
+  table="suspectbankaccount_ext"
+  type="retireable">
+  <column
+    name="BankName"
+    nullok="true"
+    type="shorttext"/>
+  <column
+    name="AccountNumber"
+    nullok="true"
+    type="shorttext"/>
+  <column
+    name="RoutingNumber"
+    nullok="true"
+    type="shorttext"/>
+  <column
+    name="AccountType"
+    nullok="true"
+    type="shorttext"/>
+  <foreignkey
+    fkentity="SuspectDetails_ext"
+    name="LinkToSupectDetails"
+    nullok="true"/>
+  <typekey
+    name="SuspectAccType"
+    nullok="true"
+    typelist="SuspectAccountTypes_EXT"/>
+  <column
+    name="GoverningLaw"
+    nullok="true"
+    type="shorttext"/>
+</entity>

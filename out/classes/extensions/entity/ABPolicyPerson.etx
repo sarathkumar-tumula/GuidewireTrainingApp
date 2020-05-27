@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<extension
+  xmlns="http://guidewire.com/datamodel"
+  entityName="ABPolicyPerson">
+  <column
+    default="true"
+    desc="Is collateral (a deposit) required to insure this person?"
+    name="CollateralRequired"
+    nullok="true"
+    type="bit"/>
+  <column
+    desc="Amount of collateral required"
+    name="CollateralAmount"
+    nullok="true"
+    type="integer"/>
+  <typekey
+    desc="YesNo"
+    name="PersonCollateralVerified"
+    nullok="true"
+    typefilter="YesNoOnly"
+    typelist="YesNo"/>
+  <column
+    desc="Height in meters, such as 1.9805"
+    name="HeightInMeters"
+    nullok="true"
+    type="decimal">
+    <columnParam
+      name="precision"
+      value="5"/>
+    <columnParam
+      name="scale"
+      value="4"/>
+  </column>
+</extension>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <ListDetailPanel
+    id="LDVEX"
+    selectionName="address"
+    selectionType="Address">
+    <Require
+      name="anABContact"
+      type="ABContact"/>
+    <PanelRef
+      def="ABContactAddressesLV(anABContact)">
+      <Toolbar>
+        <IteratorButtons
+          iterator="ABContactAddressesLV.ABContactAddressesLV"/>
+      </Toolbar>
+    </PanelRef>
+    <PanelRef
+      def="ABContactAddressCV(address,anABContact)"/>
+  </ListDetailPanel>
+</PCF>
